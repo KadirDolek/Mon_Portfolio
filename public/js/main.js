@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const burgerIcon = document.querySelector('.burger-icon');
+    const nav = document.querySelector('.nav');
+    
+    burgerMenu.addEventListener('click', () => {
+      burgerIcon.classList.toggle('open');
+      nav.classList.toggle('active');
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        burgerIcon.classList.remove('open');
+        nav.classList.remove('active');
+      });
+    });
+  });
+
+
 const body = document.querySelector('body')
 document.body.style.background = 'linear-gradient(to left, wheat, white, wheat)';
 const lien1 = document.getElementsByClassName('img-container')[0]

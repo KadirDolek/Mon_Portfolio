@@ -11,6 +11,8 @@ body{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal; 
+}
+#section1, #sec2, #sec3{
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -192,7 +194,7 @@ h1{
 footer{
     background-color: #2F4F4F;
     height: 35vh;
-    width: 125%;
+    width: 100%;
     display: flex;
     justify-self: center;
 }

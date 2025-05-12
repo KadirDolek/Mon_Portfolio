@@ -1,373 +1,136 @@
-
+#Carte1{
+    width: 25%;
+    height: 200px;
+    background-color: rgba(255,255,255,0.07);
+    background-size: contain;
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(100,120,170,0.3); /* Bordure ajustée pour/* Styles existants */}
 .caveat {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-
-body{
+nav{
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal; 
-}
-#section1, #sec2, #sec3{
-    padding-left: 10%;
-    padding-right: 10%;
-}
-h1{
-    display: flex;
-    justify-content: center;
-    color: rgb(207, 99, 99);
-    margin-bottom: 10%;
-    margin-top: 5%;
-}
-.nav {
-    position: fixed;
-    top: 250px;
-    left: 0;
-    width: 18%;
-    margin-top: 0;
-    background-color: transparent;
-    z-index: 1000;
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
-    padding: 10px 0;
-    text-shadow: 0.5px 2px 2px rgb(0, 0, 0);
-    height: 100vh;
-}
-
-.nav a {
-    color: rgb(207, 99, 99);
-    text-decoration: none;
-    font-size: 30px;
-    line-height: 95px;
-    display: flex;
-}
-.nav a img {
-    transform: translate(20px, 20px);
-}
-
-#section1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#titre1{
-    width: 650px;
-}
-
-#sec1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#h2div1{
-    color: rgb(207, 99, 99);
-    font-size: 50px;
-    display: flex;
-    justify-self: center;
-    flex-direction: column;
-    
-}
-#para1{
-    width: 740px;
+    font-style: normal;
     font-size: 25px;
-    line-height: 50px;
-    margin-top: 3%;
-    font-family: 'Times New Roman', Times, serif;
 }
-#gang {
-    height: 270px;
-    width: 250px;
-    animation: bounce 0.6s ease infinite alternate;
-    margin-top: 15%;
-    margin-left: 2%;
-}
-
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-8px);
-    }
-}
-#div1sec2{
-    margin-top: 5%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-#sous-titre{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10%;
-}
-#h2sec2{
-    color: rgb(207, 99, 99);
-    font-size: 47.5px;
-    display: flex;
-    justify-self: center;
-}
-#sec2{
-    margin-bottom: 5%;
-}
-#sec2img{
-    width: 100%;
-    display: flex;
-    gap: 3%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#sec2img img{
-    height: 250px;
-}
-
-.img-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.img-container img {
-    height: 200px;
-    display: block;
-    transition: filter 0.3s ease;
-}
-#img1{
-    height: 100px;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(45, 128, 93, 0.568);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
     opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-    transition: 1s ease;
-}
-
-.img-container:hover img {
-    filter: brightness(60%);
-    zoom: 120%;
-}
-
-.img-container:hover .overlay-text {
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
+  }
 }
 
-#sec3{
-    height: 70vh;
+.navbar {
+  animation: slideDown 0.8s ease-out forwards;
 }
-#sec3img{
-    display: flex;
-    gap: 3%;
-    height: 50vh;
-    justify-content: center;
-}
-#sec3img div{
-    width: 22.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-footer{
-    background-color: #2F4F4F;
-    height: 35vh;
-    width: 100%;
-    display: flex;
-    justify-self: center;
-}
-
-#footerDiv{
+body{
+    height: 100%;
+    margin: 0;
     padding-left: 10%;
     padding-right: 10%;
-    display: flex;
-    width: 100%;
-}
-
-#footerDiv div{
-    width: 33%;
-    display: flex;
-    justify-content: center;
+    /* Midnight Bloom avec effet métallique */
+    background: 
+        linear-gradient(135deg, rgba(25,35,65,0.4) 0%, rgba(20,30,55,0.1) 50%, rgba(25,35,65,0.4) 100%),
+        radial-gradient(ellipse at top left, rgba(120,130,190,0.15) 0%, rgba(0,0,0,0) 60%),
+        radial-gradient(ellipse at bottom right, rgba(60,70,120,0.1) 0%, rgba(0,0,0,0) 60%),
+        linear-gradient(145deg, #0a111d 0%, #141e31 20%, #1c2a45 40%, #1d2d4a 50%, #1c2a45 60%, #141e31 80%, #0a111d 100%);
+    background-color: #121b2c;
+    background-attachment: fixed;
     color: white;
 }
+#sec1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+    flex-wrap: wrap;
+    /* Suppression de l'image de fond commentée */
+}
+#Carte1{
+    width: 385px;
+    height: 200px;
+    background-color: rgba(35,45,75,0.4);
+    background-size: contain;
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(100,120,170,0.3);
+    box-shadow: 
+        0 20px 40px rgba(0,0,20,0.6),
+        inset 0 1px 2px rgba(180,200,255,0.3),
+        inset 0 -1px 1px rgba(0,10,30,0.7);
+    z-index: 10;
+    overflow: hidden;
+    animation: slideDiv1 1s ease-in-out forwards;
+    margin-bottom: 2%;
+}
+#Carte1:hover{
+    scale: 120%;
+    transition: 0.7s;
+        box-shadow: 
+        0 20px 40px rgba(170, 134, 233, 0.5),
+        inset 0 1px 2px rgba(180,200,255,0.3),
+        inset 0 -1px 1px rgba(0,10,30,0.7);
 
-
-@media (max-width: 1460px){
-    .nav a {
-        color: rgb(207, 99, 99);
-        text-decoration: none;
-        font-size: 25px;
-        line-height: 35px;
-        display: flex;
-    }
-    .nav {
-        position: fixed;
-        top: 30px;
-        left: 0;
-        width: 18%;
-        margin-top: 0;
-        background-color: transparent;
-        z-index: 1000;
-        display: flex;
-        justify-content: center; 
-        flex-direction: column;
-        padding: 10px 0;
-        text-shadow: 0.5px 2px 2px rgb(0, 0, 0);
-        height: 100vh;
-    }
-    .nav a img {
-        transform: translate(20px, 20px);
-        display: none;
-    }
+}
+#barProgres{
+    background-color: rgb(170, 134, 233);
 }
 
-
-
-
-
-/* Ajoutez ces styles à la fin de votre fichier CSS */
-
-/* Styles pour le menu burger */
-.burger-menu {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .burger-icon {
-    width: 30px;
-    height: 20px;
-    position: relative;
-  }
-  
-  .burger-icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: rgb(207, 99, 99);
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-  
-  .burger-icon span:nth-child(1) {
-    top: 0px;
-  }
-  
-  .burger-icon span:nth-child(2) {
-    top: 8px;
-  }
-  
-  .burger-icon span:nth-child(3) {
-    top: 16px;
-  }
-  
-  /* Animation du burger quand il est ouvert */
-  .burger-icon.open span:nth-child(1) {
-    top: 8px;
-    transform: rotate(135deg);
-  }
-  
-  .burger-icon.open span:nth-child(2) {
+@keyframes slideDiv1 {
+  from {
+    transform: translateX(-100%);
     opacity: 0;
-    left: -60px;
   }
-  
-  .burger-icon.open span:nth-child(3) {
-    top: 8px;
-    transform: rotate(-135deg);
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  /* Mise à jour de la media query */
-  @media (max-width: 1220px) {
-    .burger-menu {
-      display: block;
-    }
-    h2{
-        font-size: 33px !important;
-        text-align: center;
-    }
-    
-    .nav {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%;
-      height: 100vh;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-      transition: left 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 50px 0;
-      z-index: 1000;
-    }
-    
-    .nav.active {
-      left: 0;
-    }
-    
-    .nav a {
-      font-size: 28px;
-      line-height: 60px;
-      margin: 10px 0;
-      text-align: center;
-      width: 100%;
-      justify-content: center;
-    }
-    .nav a img {
-        transform: translate(20px, 20px);
-        display: none;
-    }
-    #sec2img img{
-        height: 160px;
-    }
+}
+
+#Carte2{
+    width: 385px;
+    height: 200px;
+    background-color: rgba(35,45,75,0.4);
+    background-size: contain;
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(100,120,170,0.3);
+    box-shadow: 
+        0 20px 40px rgba(0,0,20,0.6),
+        inset 0 1px 2px rgba(180,200,255,0.3),
+        inset 0 -1px 1px rgba(0,10,30,0.7);
+    z-index: 10;
+    overflow: hidden;
+    animation: slideDiv2 1s ease-in-out forwards;
+    margin-bottom: 2%;
+}
+#Carte2:hover{
+    scale: 120%;
+    transition: 0.7s;
+        box-shadow: 
+        0 20px 40px rgba(170, 134, 233, 0.5),
+        inset 0 1px 2px rgba(180,200,255,0.3),
+        inset 0 -1px 1px rgba(0,10,30,0.7);
+
+}
+
+@keyframes slideDiv2 {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

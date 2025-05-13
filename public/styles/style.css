@@ -5,19 +5,18 @@
     background-size: contain;
     backdrop-filter: blur(15px);
     border-radius: 25px;
-    border: 1px solid rgba(100,120,170,0.3); /* Bordure ajustée pour/* Styles existants */}
-.caveat {
+    border: 1px solid rgba(100,120,170,0.3);
+}
+/* .caveat {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-}
+} */
 nav{
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 25px;
+    font-size: 20px;
 }
 @keyframes slideDown {
   from {
@@ -40,13 +39,19 @@ body{
     padding-right: 10%;
     /* Midnight Bloom avec effet métallique */
     background: 
-        linear-gradient(135deg, rgba(25,35,65,0.4) 0%, rgba(20,30,55,0.1) 50%, rgba(25,35,65,0.4) 100%),
-        radial-gradient(ellipse at top left, rgba(120,130,190,0.15) 0%, rgba(0,0,0,0) 60%),
-        radial-gradient(ellipse at bottom right, rgba(60,70,120,0.1) 0%, rgba(0,0,0,0) 60%),
-        linear-gradient(145deg, #0a111d 0%, #141e31 20%, #1c2a45 40%, #1d2d4a 50%, #1c2a45 60%, #141e31 80%, #0a111d 100%);
+    linear-gradient(135deg, rgba(25,35,65,0.4) 0%, rgba(20,30,55,0.1) 50%, rgba(25,35,65,0.4) 100%),
+    radial-gradient(ellipse at top left, rgba(120,130,190,0.15) 0%, rgba(0,0,0,0) 60%),
+    radial-gradient(ellipse at bottom right, rgba(60,70,120,0.1) 0%, rgba(0,0,0,0) 60%),
+    linear-gradient(145deg, #0a111d 0%, #141e31 20%, #1c2a45 40%, #1d2d4a 50%, #1c2a45 60%, #141e31 80%, #0a111d 100%);
     background-color: #121b2c;
     background-attachment: fixed;
     color: white;
+}
+#barProgres{
+    background-color: rgb(170, 134, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #sec1{
     width: 100%;
@@ -54,83 +59,67 @@ body{
     justify-content: space-around;
     margin-top: 10%;
     flex-wrap: wrap;
-    /* Suppression de l'image de fond commentée */
 }
-#Carte1{
-    width: 385px;
-    height: 200px;
-    background-color: rgba(35,45,75,0.4);
-    background-size: contain;
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    border: 1px solid rgba(100,120,170,0.3);
-    box-shadow: 
-        0 20px 40px rgba(0,0,20,0.6),
-        inset 0 1px 2px rgba(180,200,255,0.3),
-        inset 0 -1px 1px rgba(0,10,30,0.7);
-    z-index: 10;
-    overflow: hidden;
-    animation: slideDiv1 1s ease-in-out forwards;
-    margin-bottom: 2%;
-}
-#Carte1:hover{
-    scale: 120%;
-    transition: 0.7s;
-        box-shadow: 
-        0 20px 40px rgba(170, 134, 233, 0.5),
-        inset 0 1px 2px rgba(180,200,255,0.3),
-        inset 0 -1px 1px rgba(0,10,30,0.7);
-
-}
-#barProgres{
-    background-color: rgb(170, 134, 233);
+.flip-container {
+  perspective: 1000px;
+  width: 385px;
+  height: 200px;
+  margin-bottom: 2%;
 }
 
-@keyframes slideDiv1 {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
 }
 
-#Carte2{
-    width: 385px;
-    height: 200px;
-    background-color: rgba(35,45,75,0.4);
-    background-size: contain;
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    border: 1px solid rgba(100,120,170,0.3);
-    box-shadow: 
-        0 20px 40px rgba(0,0,20,0.6),
-        inset 0 1px 2px rgba(180,200,255,0.3),
-        inset 0 -1px 1px rgba(0,10,30,0.7);
-    z-index: 10;
-    overflow: hidden;
-    animation: slideDiv2 1s ease-in-out forwards;
-    margin-bottom: 2%;
-}
-#Carte2:hover{
-    scale: 120%;
-    transition: 0.7s;
-        box-shadow: 
-        0 20px 40px rgba(170, 134, 233, 0.5),
-        inset 0 1px 2px rgba(180,200,255,0.3),
-        inset 0 -1px 1px rgba(0,10,30,0.7);
-
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
 }
 
-@keyframes slideDiv2 {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+
+.face-front, .face-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  background-color: rgba(35,45,75,0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(100,120,170,0.3);
+  box-shadow: 
+      0 20px 40px rgba(0,0,20,0.6),
+      inset 0 1px 2px rgba(180,200,255,0.3),
+      inset 0 -1px 1px rgba(0,10,30,0.7);
+  z-index: 10;
+  overflow: hidden;
 }
+
+
+.face-front {
+  z-index: 2;
+}
+
+
+.face-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.flip-container.carte1 {
+  animation: slideDiv1 1s ease-in-out forwards;
+}
+
+
+.flip-container.carte2 {
+  animation: slideDiv2 1s ease-in-out forwards;
+}
+

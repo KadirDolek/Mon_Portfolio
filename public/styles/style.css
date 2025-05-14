@@ -123,3 +123,27 @@ body{
   animation: slideDiv2 1s ease-in-out forwards;
 }
 
+@keyframes slideDiv1 {
+
+   from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+@keyframes slideDiv2 {
+
+   from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}

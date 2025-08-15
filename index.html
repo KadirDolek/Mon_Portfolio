@@ -1,442 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="./public/js/main.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Portfolio - Kadir Dolek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Caveat:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <link rel="stylesheet" href="./public/styles/style.css" />
   </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-
-          <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item">
-              <a style="color: white" class="nav-link" href="#sec1">Projets</a>
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="nav-link active"
-                aria-current="page"
-                href="#moi"
-                >
-                A propos de moi</a>
-            </li>
-
-            <li class="nav-item">
-              <a style="color: white" class="nav-link" href="#foot">Informations</a>
-            </li>
-          </ul>
-        </div>
+  <body class="bg-gray-900 text-white font-sans">
+    
+    <!-- Navigation -->
+    <header class="bg-gray-800">
+      <nav class="container mx-auto flex justify-center py-4">
+        <ul class="flex flex-wrap gap-6 text-lg">
+          <li><a href="#sec1" class="hover:text-purple-400">Projets</a></li>
+          <li><a href="#moi" class="hover:text-purple-400">À propos de moi</a></li>
+          <li><a href="#foot" class="hover:text-purple-400">Informations</a></li>
+        </ul>
       </nav>
     </header>
-     <section id="moi" class="container-fluid py-5" style="background-color: transparent;">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Informations à gauche -->
-          <div class="col-md-6">
-            <div class="p-4">
-              <h2 class="mb-4" style="color: white; font-weight: bold;">À propos de moi</h2>
-              <div class="mb-3">
-                <h4 style="color: rgb(170, 134, 233); margin-bottom: 15px;">Kadir Dolek</h4>
-                <p style="font-size: 18px; color: white; line-height: 1.6;">
-                  <strong>Âge :</strong> 31 ans
-                </p>
-              </div>
-              
-              <div class="mb-4">
-                <h5 style="color: white; margin-bottom: 15px;">Mon parcours</h5>
-                <p style="font-size: 16px; color: white; line-height: 1.7;">
-                  Je me suis plongé dans le monde du coding après une reconversion professionnelle. 
-                  Cette transition m'a permis de découvrir ma passion pour le développement web et 
-                  la programmation.
-                </p>
-              </div>
 
-              <div class="mb-4">
-                <h5 style="color: white; margin-bottom: 15px;">Mes spécialisations</h5>
-                <p style="font-size: 16px; color: white; line-height: 1.7;">
-                  Je suis particulièrement porté sur les langages et technologies suivants :
-                </p>
-                <ul style="list-style: none; padding-left: 0;">
-                  <li style="margin-bottom: 8px; color: white;">
-                    <span style="color: rgb(170, 134, 233); font-weight: bold;">•</span> Java
-                  </li>
-                  <li style="margin-bottom: 8px; color: white">
-                    <span style="color: rgb(170, 134, 233); font-weight: bold;">•</span> Next.js
-                  </li>
-                  <li style="margin-bottom: 8px; color: white">
-                    <span style="color: rgb(170, 134, 233); font-weight: bold;">•</span> Tailwind CSS
-                  </li>
-                  <li style="margin-bottom: 8px; color: white">
-                    <span style="color: rgb(170, 134, 233); font-weight: bold;">•</span> PHP/Laravel
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <!-- Section A propos -->
+    <section id="moi" class="container mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        
+        <!-- Infos -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">À propos de moi</h2>
+          <h4 class="text-purple-400 text-xl mb-2">Kadir Dolek</h4>
+          <p class="mb-6 text-lg"><strong>Âge :</strong> 31 ans</p>
+
+          <div class="mb-6">
+            <h5 class="text-xl font-semibold mb-2">Mon parcours</h5>
+            <p class="leading-relaxed text-gray-300">
+              Je me suis plongé dans le monde du coding après une reconversion professionnelle.
+              Cette transition m'a permis de découvrir ma passion pour le développement web et
+              la programmation.
+            </p>
           </div>
 
-          <!-- Photo à droite -->
-          <div class="col-md-6">
-            <div class="text-center">  
-                  <img style="border-radius: 50%;" src="./public/assets/img/1711900620345.jpeg" alt="">
-                  <br>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="sec1">
-      <!-- Première carte avec effet flip -->
-      <div class="flip-container carte1">
-        <div class="flipper">
-          <!-- Face avant de la carte -->
-          <div class="face-front">
-            <p style="text-align: center; margin-top: 20%; font-size: 30px">
-              HTML/CSS/JS
-            </p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Danger striped example"
-              aria-valuenow="100"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="position: absolute; bottom: 5px; left: 20px; width: 90%"
-            >
-              <div
-                id="barProgres"
-                class="progress-bar-animated progress-bar-striped"
-                style="width: 100%; font-size: 17px"
-              >
-              </div>
-            </div>
-          </div>
-          <!-- Face arrière de la carte -->
-          <div class="face-back">
-            <p>
-              Maitriste des langages front-end et création d'interfaces
-              responsive et interactives
-            </p>
-            <br/>
-            <h5>
-              <a
-                style="text-decoration: none; color: rgb(170, 134, 233)"
-                href=""
-                >Site vitrine tatouage(en cours...)</a
-              >
-            </h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Deuxième carte avec effet flip -->
-      <div class="flip-container carte1">
-        <div class="flipper">
-          <!-- Face avant de la carte -->
-          <div class="face-front">
-            <p style="text-align: center; margin-top: 20%; font-size: 30px">
-              NextJs(Tailwind CSS)
-            </p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Danger striped example"
-              aria-valuenow="100"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="position: absolute; bottom: 5px; left: 20px; width: 90%"
-            >
-              <div
-                id="barProgres"
-                class="progress-bar-animated progress-bar-striped"
-                style="width: 100%; font-size: 17px"
-              >
-                
-              </div>
-            </div>
-          </div>
-          <!-- Face arrière de la carte -->
-          
-          <div class="face-back">
-            <p>
-              <a
-                style="
-                  text-decoration: none;
-                  color: rgb(170, 134, 233);
-                  font-size: 20px;
-                  font-weight: bold;
-                "
-                href="https://projetlitteria-kadirdolek.vercel.app/"
-                >Projet Litteria - simulation d'achat de livres</a>
-            </p>
-            <p>
-              
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Troisième carte avec effet flip -->
-      <div class="flip-container carte1">
-        <div class="flipper">
-          <!-- Face avant de la carte -->
-          <div class="face-front">
-            <p style="text-align: center; margin-top: 20%; font-size: 30px">
-              Java
-            </p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Danger striped example"
-              aria-valuenow="100"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="position: absolute; bottom: 5px; left: 20px; width: 70%"
-            >
-              <div
-                id="barProgres"
-                class="progress-bar-animated progress-bar-striped"
-                style="width: 100%; font-size: 17px"
-              >
-                
-              </div>
-            </div>
-          </div>
-          <!-- Face arrière de la carte -->
-          <div class="face-back">
-            <p>Le petit tuto pour faire tourner les jeux.</p>
-                          <a
-                style="
-                  text-decoration: none;
-                  color: rgb(170, 134, 233);
-                  font-size: 20px;
-                  font-weight: bold;
-                "
-                href="https://kadirdolek.github.io/GetInTheTown/"
-                >GetInTheTown</a>
-                          <a
-                style="
-                  text-decoration: none;
-                  color: rgb(170, 134, 233);
-                  font-size: 20px;
-                  font-weight: bold;
-                "
-                href="https://kadirdolek.github.io/GetInTheTown/"
-                >FlappyBird</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="sec1">
-      <!-- Quatrième carte avec effet flip -->
-      <div class="flip-container carte2">
-        <div class="flipper">
-          <!-- Face avant de la carte -->
-          <div class="face-front">
-            <p style="text-align: center; margin-top: 20%; font-size: 30px">
-              PHP/Laravel
-            </p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Danger striped example"
-              aria-valuenow="100"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="position: absolute; bottom: 5px; left: 20px; width: 70%"
-            >
-              <div
-                id="barProgres"
-                class="progress-bar-animated progress-bar-striped"
-                style="width: 100%; font-size: 17px"
-              >
-              </div>
-            </div>
-          </div>
-          <!-- Face arrière de la carte -->
-          <div class="face-back">
-            <h5>Migrations</h5>
-            <h5>Model</h5>
-            <h5>Gestion de DB</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cinquième carte avec effet flip -->
-      <div class="flip-container carte2">
-        <div class="flipper">
-          <!-- Face avant de la carte -->
-          <div class="face-front">
-            <p style="text-align: center; margin-top: 20%; font-size: 30px">
-              React
-            </p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Danger striped example"
-              aria-valuenow="100"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="position: absolute; bottom: 5px; left: 20px; width: 80%"
-            >
-              <div
-                id="barProgres"
-                class="progress-bar-animated progress-bar-striped"
-                style="width: 100%; font-size: 17px"
-              >
-                
-              </div>
-            </div>
-          </div>
-          <!-- Face arrière de la carte -->
-          <div class="face-back">
-           <h5>Gestion de donn&es avec Redux</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sixième carte avec effet flip -->
-      <div class="flip-container carte2">
-        <div class="flipper">
-          <!-- Face avant de la carte -->
-          <div class="face-front">
-            <p style="text-align: center; margin-top: 20%; font-size: 30px">
-              Python
-            </p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Danger striped example"
-              aria-valuenow="100"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="position: absolute; bottom: 5px; left: 20px; width: 60%"
-            >
-              <div
-                id="barProgres"
-                class="progress-bar-animated progress-bar-striped"
-                style="width: 100%; font-size: 17px"
-              >
-              </div>
-            </div>
-          </div>
-          <!-- Face arrière de la carte -->
-          <div class="face-back">
-              <p>Langage polyvalent</p>
-              <p>Développement d'un jeu du pendu en première expérience</p>
-              <p>Apprentissage autoditacte de Ren'Py et Pygames.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   
-
-     <footer id="foot" class="bg-transparent text-white py-5">
-      <div class="container">
-        <div class="row">
-          <!-- Première colonne - À propos -->
-          <div class="col-md-4 mb-4">
-            <h5 class="mb-3" style="color: rgb(170, 134, 233);">À propos</h5>
-            <p class="text-light">
-              Développeur passionné spécialisé dans le développement web moderne. 
-              Toujours en quête de nouveaux défis techniques et d'apprentissage continu.
-            </p>
-            <div class="mt-3">
-              <span class="badge" style="background-color: rgb(170, 134, 233);">Disponible pour projets</span>
-            </div>
-          </div>
-
-          <!-- Deuxième colonne - Contact -->
-          <div class="col-md-4 mb-4 text-center">
-            <h5 class="mb-3" style="color: rgb(170, 134, 233);">Contact</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="fas fa-envelope me-2"></i>
-                <a href="mailto:kadir.dolek@example.com" class="text-light text-decoration-none">
-                  kadir.dolek@example.com
-                </a>
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-phone me-2"></i>
-                <span class="text-light">+33 X XX XX XX XX</span>
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-map-marker-alt me-2"></i>
-                <span class="text-light">France</span>
-              </li>
+          <div>
+            <h5 class="text-xl font-semibold mb-2">Mes spécialisations</h5>
+            <ul class="space-y-2">
+              <li><span class="text-purple-400 font-bold">•</span> Java</li>
+              <li><span class="text-purple-400 font-bold">•</span> Next.js</li>
+              <li><span class="text-purple-400 font-bold">•</span> Tailwind CSS</li>
+              <li><span class="text-purple-400 font-bold">•</span> PHP/Laravel</li>
             </ul>
           </div>
-
-          <!-- Troisième colonne - Réseaux sociaux et liens -->
-          <div class="col-md-4 mb-4 text-end">
-    <h5 class="mb-3" style="color: rgb(170, 134, 233);">Suivez-moi</h5>
-    <div class="d-flex flex-column align-items-end">
-        <a href="https://github.com/kadirdolek" class="text-light text-decoration-none mb-2 d-flex align-items-center">
-            <i class="fab fa-github me-2"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/kadirdolek" class="text-light text-decoration-none mb-2 d-flex align-items-center">
-            <i class="fab fa-linkedin me-2"></i> LinkedIn
-        </a>
-        <a href="https://twitter.com/kadirdolek" class="text-light text-decoration-none mb-2 d-flex align-items-center">
-            <i class="fab fa-twitter me-2"></i> Twitter
-        </a>
-    </div>
-
-    <div class="mt-4">
-        <h6 style="color: rgb(170, 134, 233);">Mes projets</h6>
-        <a href="https://projetlitteria-kadirdolek.vercel.app/" class="text-light text-decoration-none d-block mb-1">
-            <small>Projet Litteria</small>
-        </a>
-        <a href="https://kadirdolek.github.io/GetInTheTown/" class="text-light text-decoration-none d-block mb-1">
-            <small>GetInTheTown</small>
-        </a>
-    </div>
-</div>
-
         </div>
 
-        <!-- Ligne de séparation -->
-        <hr style="border-color: rgb(170, 134, 233); opacity: 0.3;">
+        <!-- Photo -->
+        <div class="flex justify-center">
+          <img src="./public/assets/img/1711900620345.jpeg" alt="Portrait"
+               class="rounded-full w-56 h-56 object-cover shadow-lg">
+        </div>
+      </div>
+    </section>
 
-        <!-- Copyright -->
-        <div class="row">
-          <div class="col-12 text-center">
-            <p class="mb-0 text-white">
-              &copy; 2024 Kadir Dolek. Tous droits réservés. | Développé avec passion ❤️
-            </p>
+    <!-- Section Projets -->
+    <section id="sec1" class="container mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Carte -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-4">HTML/CSS/JS</h3>
+        <p class="mb-4">Maîtrise des langages front-end et création d'interfaces responsive et interactives.</p>
+        <div class="w-full bg-gray-700 rounded-full h-3 mb-4">
+          <div class="bg-purple-400 h-3 rounded-full" style="width: 100%"></div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-4">Next.js (Tailwind CSS)</h3>
+        <p class="mb-4">Projet Litteria - simulation d'achat de livres</p>
+        <a href="https://projetlitteria-kadirdolek.vercel.app/" class="text-purple-400 hover:underline">Voir le projet</a>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-4">Java</h3>
+        <p class="mb-4">Projets de jeux et tutoriels.</p>
+        <a href="https://kadirdolek.github.io/GetInTheTown/" class="block text-purple-400 hover:underline">GetInTheTown</a>
+        <a href="https://kadirdolek.github.io/GetInTheTown/" class="block text-purple-400 hover:underline">FlappyBird</a>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-4">PHP/Laravel</h3>
+        <ul class="list-disc list-inside text-gray-300">
+          <li>Migrations</li>
+          <li>Model</li>
+          <li>Gestion de DB</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-4">React</h3>
+        <p>Gestion de données avec Redux</p>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-4">Python</h3>
+        <p>Langage polyvalent : développement d'un jeu du pendu, apprentissage de Ren'Py et Pygame.</p>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="foot" class="bg-gray-800 py-10">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        
+        <!-- À propos -->
+        <div>
+          <h5 class="text-purple-400 font-semibold mb-3">À propos</h5>
+          <p class="text-gray-300">Développeur passionné spécialisé dans le développement web moderne.</p>
+          <span class="inline-block mt-3 px-3 py-1 bg-purple-400 text-gray-900 rounded">Disponible pour projets</span>
+        </div>
+
+        <!-- Contact -->
+        <div class="text-center">
+          <h5 class="text-purple-400 font-semibold mb-3">Contact</h5>
+          <p>kadir.dolek@example.com</p>
+          <p>+33 X XX XX XX XX</p>
+          <p>France</p>
+        </div>
+
+        <!-- Réseaux -->
+        <div class="text-right">
+          <h5 class="text-purple-400 font-semibold mb-3">Suivez-moi</h5>
+          <a href="https://github.com/kadirdolek" class="block hover:text-purple-400">GitHub</a>
+          <a href="https://linkedin.com/in/kadirdolek" class="block hover:text-purple-400">LinkedIn</a>
+          <a href="https://twitter.com/kadirdolek" class="block hover:text-purple-400">Twitter</a>
+          <div class="mt-4">
+            <h6 class="text-purple-400">Mes projets</h6>
+            <a href="https://projetlitteria-kadirdolek.vercel.app/" class="block hover:underline">Projet Litteria</a>
+            <a href="https://kadirdolek.github.io/GetInTheTown/" class="block hover:underline">GetInTheTown</a>
           </div>
         </div>
       </div>
-            </div>
-            
-
-      <!-- Ajout des icônes Font Awesome -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+      <div class="text-center mt-6 text-gray-400 text-sm">
+        &copy; 2024 Kadir Dolek. Tous droits réservés.
+      </div>
     </footer>
+
   </body>
 </html>

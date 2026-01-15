@@ -1,23 +1,329 @@
-#Carte1{
-    width: 25%;
-    height: 200px;
-    background-color: rgba(255,255,255,0.07);
-    background-size: contain;
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    border: 1px solid rgba(100,120,170,0.3);
+/* ========================================
+   PORTFOLIO - KADIR DOLEK
+   Color Palette:
+   - Primary: #FCAF58 (Orange)
+   - Secondary: #F9C784 (Peach)
+   - White: #FFFFFF
+   - Accent: #4E598C (Dark Blue)
+   ======================================== */
+
+/* ========== ROOT VARIABLES ========== */
+:root {
+  --primary: #FCAF58;
+  --secondary: #F9C784;
+  --white: #FFFFFF;
+  --accent: #4E598C;
+  --dark: #1a1f3a;
+  --darker: #12162b;
+  --glass-bg: rgba(78, 89, 140, 0.15);
+  --glass-border: rgba(252, 175, 88, 0.2);
 }
-/* .caveat {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-} */
-nav{
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
+
+/* ========== BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, var(--darker) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--darker);
+}
+
+/* ========== NAVIGATION ========== */
+.navbar {
+  background: rgba(18, 22, 43, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--white);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at top left, rgba(252, 175, 88, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(249, 199, 132, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at center, rgba(78, 89, 140, 0.2) 0%, transparent 70%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== BUTTONS ========== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--darker);
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(252, 175, 88, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(252, 175, 88, 0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--darker);
+  transform: translateY(-3px);
+}
+
+/* ========== GLASS CARDS ========== */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(252, 175, 88, 0.4);
+  box-shadow: 0 20px 60px rgba(252, 175, 88, 0.1);
+  transform: translateY(-5px);
+}
+
+/* ========== STAT CARDS ========== */
+.stat-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(252, 175, 88, 0.15);
+}
+
+/* ========== TAGS ========== */
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(252, 175, 88, 0.15);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(252, 175, 88, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: var(--primary);
+  color: var(--darker);
+}
+
+/* ========== SKILL CARDS ========== */
+.skill-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(252, 175, 88, 0.1);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  width: var(--progress);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+  animation: progressFill 1.5s ease-out forwards;
+  transform-origin: left;
+}
+
+.skill-bar.secondary .skill-progress,
+.skill-progress.secondary {
+  background: linear-gradient(90deg, var(--accent), #6b7ab8);
+}
+
+/* ========== PROJECT CARDS ========== */
+.project-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(252, 175, 88, 0.15);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(252, 175, 88, 0.9), rgba(249, 199, 132, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--darker);
+  border-radius: 50%;
+  color: var(--white);
+  transform: scale(0);
+  transition: all 0.4s ease 0.1s;
+}
+
+.project-card:hover .project-link {
+  transform: scale(1);
+}
+
+.project-link:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+/* ========== TECH TAGS ========== */
+.tech-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(78, 89, 140, 0.3);
+  color: var(--secondary);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* ========== SOCIAL LINKS ========== */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: var(--darker);
+  transform: translateX(5px);
+}
+
+/* ========== STATUS DOT ========== */
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+}
+
+/* ========== ANIMATIONS ========== */
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -29,121 +335,120 @@ nav{
   }
 }
 
-.navbar {
-  animation: slideDown 0.8s ease-out forwards;
+@keyframes progressFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
-body{
-    height: 100%;
-    margin: 0;
-    padding-left: 10%;
-    padding-right: 10%;
-    /* Midnight Bloom avec effet métallique */
-    background: 
-    linear-gradient(135deg, rgba(25,35,65,0.4) 0%, rgba(20,30,55,0.1) 50%, rgba(25,35,65,0.4) 100%),
-    radial-gradient(ellipse at top left, rgba(120,130,190,0.15) 0%, rgba(0,0,0,0) 60%),
-    radial-gradient(ellipse at bottom right, rgba(60,70,120,0.1) 0%, rgba(0,0,0,0) 60%),
-    linear-gradient(145deg, #0a111d 0%, #141e31 20%, #1c2a45 40%, #1d2d4a 50%, #1c2a45 60%, #141e31 80%, #0a111d 100%);
-    background-color: #121b2c;
-    background-attachment: fixed;
-    color: white;
+
+/* Fade in animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
 }
-#barProgres{
-    background-color: rgb(170, 134, 233);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.fade-in-delayed {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease 0.3s forwards;
 }
-#sec1{
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating animations */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ========== SCROLL ANIMATIONS (JS Enhanced) ========== */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grid items */
+.scroll-animate:nth-child(1) { transition-delay: 0s; }
+.scroll-animate:nth-child(2) { transition-delay: 0.1s; }
+.scroll-animate:nth-child(3) { transition-delay: 0.2s; }
+.scroll-animate:nth-child(4) { transition-delay: 0.3s; }
+.scroll-animate:nth-child(5) { transition-delay: 0.4s; }
+.scroll-animate:nth-child(6) { transition-delay: 0.5s; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.5rem;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10%;
-    flex-wrap: wrap;
-}
-.flip-container {
-  perspective: 1000px;
-  width: 385px;
-  height: 200px;
-  margin-bottom: 2%;
-}
-
-.flipper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s;
-  transform-style: preserve-3d;
-}
-
-.flip-container:hover .flipper {
-  transform: rotateY(180deg);
-}
-
-
-.face-front, .face-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 25px;
-  background-color: rgba(35,45,75,0.4);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(100,120,170,0.3);
-  box-shadow: 
-      0 20px 40px rgba(0,0,20,0.6),
-      inset 0 1px 2px rgba(180,200,255,0.3),
-      inset 0 -1px 1px rgba(0,10,30,0.7);
-  z-index: 10;
-  overflow: hidden;
-}
-
-
-.face-front {
-  z-index: 2;
-}
-
-
-.face-back {
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-
-.flip-container.carte1 {
-  animation: slideDiv1 1s ease-in-out forwards;
-}
-
-
-.flip-container.carte2 {
-  animation: slideDiv2 1s ease-in-out forwards;
-}
-
-@keyframes slideDiv1 {
-
-   from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
 }
-@keyframes slideDiv2 {
 
-   from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+::-webkit-scrollbar-track {
+  background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ========== FOCUS STATES ========== */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ========== SMOOTH TRANSITIONS ========== */
+a, button {
+  transition: all 0.3s ease;
+}
+
+img {
+  transition: transform 0.4s ease;
 }
